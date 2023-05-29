@@ -200,19 +200,19 @@ export default function Page() {
               <h1 className="text-center text-2xl font-bold text-gray-500 mb-10">ADD POST</h1>
               <div className="space-y-4">
                 <div>
-                  <label for="title" className="text-lx font-serif">Title:</label>
+                  <label htmlFor="title" className="text-lx font-serif">Title:</label>
                   <input type="text" placeholder="title" id="title" className="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md" />
                 </div>
                 <div>
-                  <label for="description" className="block mb-2 text-lg font-serif">Description:</label>
-                  <textarea id="description" cols={30} rows={10} placeholder="whrite here.." className="w-full font-serif  p-4 text-gray-600 bg-indigo-50 outline-none rounded-md"></textarea>
-                </div>
-                <div>
-                  <label for="name" className="text-lx font-serif">Name:</label>
+                  <label htmlFor="name-product" className="text-lx font-serif">Name Product:</label>
                   <input type="text" placeholder="name" id="name" className="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md" />
                 </div>
                 <div>
-                  <label for="email" className="text-lx font-serif">Email:</label>
+                  <label htmlFor="description" className="block mb-2 text-lg font-serif">Description:</label>
+                  <textarea id="description" cols={30} rows={10} placeholder="whrite here.." className="w-full font-serif  p-4 text-gray-600 bg-indigo-50 outline-none rounded-md"></textarea>
+                </div>
+                <div>
+                  <label htmlFor="images" className="text-lx font-serif">Upload Image:</label>
                   <input type="text" placeholder="name" id="email" className="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md" />
                 </div>
                 <button className=" px-6 py-2 mx-auto block rounded-md text-lg font-semibold text-indigo-100 bg-indigo-600  ">ADD POST</button>
