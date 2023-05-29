@@ -212,10 +212,10 @@ export default function Page() {
                   <textarea id="description" cols={30} rows={10} placeholder="whrite here.." className="w-full font-serif  p-4 text-gray-600 bg-indigo-50 outline-none rounded-md"></textarea>
                 </div>
                 <div>
-                  <label htmlFor="images" className="text-lx font-serif">Upload Image:</label>
-                  <input type="text" placeholder="name" id="email" className="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md" />
+                  <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white" htmlFor="file_input">Upload Image</label>
+                  <input type="file" className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="file_input"/>
                 </div>
-                <button className=" px-6 py-2 mx-auto block rounded-md text-lg font-semibold text-indigo-100 bg-indigo-600  ">ADD POST</button>
+                <button className=" px-6 py-2 mx-auto block rounded-md text-lg font-semibold text-indigo-100 bg-indigo-600">ADD POST</button>
               </div>
             </div>
           </div>
