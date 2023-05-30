@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <GoogleAnalytics GA_TRACKING_ID={process.env.GA_TRACKING_ID as string} />
-      <body className={inter.className + 'bg-gray-800 font-sans leading-normal tracking-normal mt-12'}>{children}</body>
+      <body className={inter.className}>{children}</body>
     </html>
   )
 }

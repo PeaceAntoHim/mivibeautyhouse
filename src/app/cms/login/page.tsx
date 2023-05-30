@@ -1,20 +1,34 @@
+"use client"
 
-
-
+import { useState } from 'react';
 
 export default function Page() {
+   const [showPassword, setShowPassword] = useState(false);
+
+  const handleShowPassword = () => {
+    setShowPassword(!showPassword);
+  };
+
    return (
-      <div className="container max-w-full mx-auto py-24 px-6">
+    <div className="container max-w-full mx-auto py-10 px-6">
+          <style global jsx>{`
+      html,
+      body,
+      body > div:first-child,
+      div#__next,
+      div#__next > div {
+        height: 100%;
+      }
+    `}</style>
         <div className="font-sans">
-          <div className="max-w-sm mx-auto px-6">
+          <div className="max-w-sm mx-auto px-6 py-10">
             <div className="relative flex flex-wrap">
               <div className="w-full relative">
                 <div className="mt-6">
                   <div className="mb-5 pb-1 border-b-2 text-center font-base text-gray-700">
-                    <span>By <a className="text-blue-500" href="https://twitter.com/framansi">@framansi</a></span>
                   </div>
                   <div className="text-center font-semibold text-black">
-                    Lorem ipsum dolor, sit amet?
+                   Sign-In 
                   </div>
   
                   <form className="mt-8">
@@ -22,7 +36,7 @@ export default function Page() {
                       <div className="py-2">
                         <span className="px-1 text-sm text-gray-600">Username</span>
                         <input
-                          placeholder=""
+                          placeholder="Enter your username"
                           type="text"
                           className="text-md block px-3 py-2 rounded-lg w-full bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none"
                         />
@@ -31,18 +45,17 @@ export default function Page() {
                         <span className="px-1 text-sm text-gray-600">Password</span>
                         <div className="relative">
                           <input
-                            placeholder=""
-                           //  type={show ? 'password' : 'text'}
+                            placeholder="Enter your password"
+                            type={showPassword ? 'text' : 'password'}
                             className="text-md block px-3 py-2 rounded-lg w-full bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none"
                           />
                           <div className="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
                             <svg
-                              className="h-6 text-gray-700"
+                              className={`h-6 text-gray-700 ${showPassword ? 'block' : 'hidden'}`}
                               fill="none"
-                              // onClick={() => { show = !show }}
-                              // className={show ? 'hidden' : 'block'}
-                              // xmlns="http://www.w3.org/2000/svg"
-                              // viewBox="0 0 576 512"
+                              onClick={handleShowPassword}
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 576 512"
                             >
                               <path
                                 fill="currentColor"
@@ -51,10 +64,9 @@ export default function Page() {
                             </svg>
   
                             <svg
-                              className="h-6 text-gray-700"
+                              className={`h-6 text-gray-700 ${showPassword ? 'hidden' : 'block'}`}
                               fill="none"
-                              // onClick={() => { show = !show }}
-                              // className={show ? 'block' : 'hidden'}
+                              onClick={handleShowPassword}
                               xmlns="http://www.w3.org/2000/svg"
                               viewBox="0 0 640 512"
                             >
@@ -89,7 +101,7 @@ export default function Page() {
           </div>
         </div>
       </div>
-    );
+      
+    )
 }
-import React from 'react';
 
