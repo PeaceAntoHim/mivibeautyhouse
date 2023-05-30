@@ -5,7 +5,7 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: "CMS - Login",
+  title: "CMS - Reset Password",
 }
 
 export default function RootLayout({
