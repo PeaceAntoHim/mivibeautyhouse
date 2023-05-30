@@ -5,7 +5,7 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: "Mivi Beauty House - Beauty Products and Services",
+  title: "Mivi Beauty House - Beauty Products and Store",
   viewport: "width=device-width, initial-scale=1.0",
   description: "Mivi Beauty House offers a wide range of beauty products and services. Visit us for high-quality beauty products and professional beauty services.",
   keywords: "Mivi Beauty House, beauty products, beauty services, high-quality, professional",
